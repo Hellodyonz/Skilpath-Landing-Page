@@ -190,7 +190,7 @@ main {
 
 /* Input Form */
 
-.contact-section input#name,.contact-section input#city,.contact-section input#email,.contact-section input#zip-code   {
+.input-contact input  {
     /* border: 1px solid var(--regular-text-color); */
     background-color: rgba(239, 239, 239, 0.355);
     width: 50%;
@@ -199,7 +199,6 @@ main {
     margin-bottom: 20px;
     margin-top: 10px;
 }
-
 
 .contact-section {
     margin-top: 74px;
@@ -214,18 +213,6 @@ main {
     background-color: #ffd6d2;
     color: red;
     border-radius: 20px;
-}
-
-#submit-form{
-    padding: 12px 43px;
-    background-color: var(--primary-color);
-    color: white;
-    border-radius: 50px;
-    font-weight: 600
-}
-
-#check {
-    margin-right: 10px;
 }
 
 
