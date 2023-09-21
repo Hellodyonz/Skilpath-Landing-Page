@@ -30,30 +30,41 @@ function checkboxIsChecked(){
     return nilaiCB.status;
 }
 
-// Nomor 9
-function validateFormData(formData){
-    if(formData !== null && isNumber(formData.zipCode) && checkboxIsChecked()){
-    return true;
+// nomor 9
+
+function validateFormData() {
+    const isiData = handleGetFormData();
+    const isiDataValid =
+        isiData.name != null && isiData.name != "" &&
+        isiData.city != null && isiData.city != "" && 
+        isiData.email != null && isiData.email != "" && 
+        isiData.zipCode != null && isiData.zipCode != "" && 
+        isiData.status != null && isiData.status != "";
+    if (isiDataValid && isNumber(isiData.zipCode) && checkboxIsChecked()) {
+        return true;
     } else {
-    return false;
+        return false;
     }
 }
-
 
 // Nomor 10
+
 const btnSubmit = document.getElementById('submit-form');
 
-function submit() {
+function submit(event){
+    event.preventDefault();
 
-    const formData = handleGetFormData(); 
-    const warning = document.getElementById("warning");
 
-    if (validateFormData(formData)) {
-        warning.textContent = ""; 
+    if(validateFormData() == false){
+        const warning = document.getElementById("warning");
+        warning.textContent = "Periksa form anda sekali lagi";
+        warning.classList.add('warning')
     } else {
-        warning.textContent = "Periksa form anda sekali lagi"; 
+        const warning = document.getElementById("warning");
+        warning.textContent = "";
+        warning.classList.remove('warning')
     }
 }
 
-btnSubmit.addEventListener("click", submit);
-
+const form = document.querySelector(".contact-form");
+form.addEventListener("submit", submit);
