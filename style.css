@@ -1,0 +1,256 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --heading-1: 3.2rem;
+    --heading-2: 2.25rem;
+    --heading-3: 1.25rem;
+    --paragraph: 1rem;
+    --primary-color: #6C60E0;
+    --secondary-color: #F75C4E;
+    --basic-text-color: #070F18;
+    --regular-text-color: #575455;
+}
+
+h1 {
+    font-size: var(--heading-1);
+}
+h2 {
+    font-size: var(--heading-2);
+}
+h3 {
+    font-size: var(--heading-4);
+}
+p {
+    font-size: var(--paragraph);
+    line-height: 32px;
+}
+
+.container {
+    margin-left: 132px;
+    margin-right: 132px;
+}
+
+.selected-text {
+    font-weight: 600;
+}
+
+nav {
+    padding-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo img{
+    width: 50%;
+}
+
+.nav-list {
+    display: flex;
+    gap: 59px;
+    font-size: var(--paragraph);
+}
+
+.btn-signin {
+    padding: 12px 48px;
+    border-radius: 50px;
+}
+
+/* header */
+
+.header-section {
+    padding-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'text-banner image-banner';
+}
+
+.image-banner {
+    grid-area: image-banner;
+}
+
+.text-banner {
+    grid-area: text-banner;
+    padding-top: 36px;
+}
+
+.text-banner p{
+    color: var(--regular-text-color);
+    margin-bottom: 30px;
+}
+
+.btn-started button{
+    padding: 12px 43px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50px;
+    font-weight: 600
+}
+
+.text-banner p {
+    margin-top: 10px;
+}
+
+/*sponsor  */
+
+.sponsor-section {
+    margin-top: 70px;
+    display: flex;
+    font-weight: 600;
+    justify-content: space-between;
+}
+
+.sponsor-list img {
+    width: 50%;
+    height: auto; /* Setel height ke auto untuk menjaga aspek rasio */
+}
+
+.sponsor-list {
+    display: flex;
+    align-items: center;
+}
+
+/* main */
+
+main {
+    margin-top: 130px;
+    margin-bottom: 120px;
+}
+
+.benefit-header {
+    text-align: center;
+}
+
+.benefit-header .highlight{
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+.highlight{
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+.benefit-list {
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    row-gap: 60px;
+}
+
+.benefit-header p {
+    color: #575455;
+}
+
+.benefit-header h2 {
+    margin-top: 6px;
+    margin-bottom:20px; 
+}
+
+
+.benefit-item {
+    display: flex;
+    gap: 24px;
+}
+
+.benefit-item h4 {
+    font-size: var(--heading-4);
+    margin-bottom: 12px;
+}
+
+.invite-section {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+
+.invite-caption h2 {
+    margin-bottom: 20px;
+}
+
+.form-mail {
+    margin-top: 40px;
+    background-color: #F5F6FB;
+    color: #575455;
+    padding: 12px 24px;
+    border-radius: 50px;
+}
+
+/* Input Form */
+
+.input-contact input  {
+    /* border: 1px solid var(--regular-text-color); */
+    background-color: rgba(239, 239, 239, 0.355);
+    width: 50%;
+    padding: 10px 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+
+}
+
+.contact-section {
+    margin-top: 74px;
+}
+
+.contact-gestoria {
+    margin-top: 30px;
+}
+
+.warning {
+    padding: 5px 10px;
+    background-color: #ffd6d2;
+    color: red;
+    border-radius: 20px;
+}
+
+.contact-section input#name,.contact-section input#city,.contact-section input#email,.contact-section input#zip-code   {
+    /* border: 1px solid var(--regular-text-color); */
+    background-color: rgba(239, 239, 239, 0.355);
+    width: 50%;
+    padding: 10px 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+
+
+/* footer */
+
+.footer-section {
+    display: flex;
+    margin-bottom: 100px;
+    justify-content: space-between;
+}
+
+.list-head {
+    font-weight: 600;
+}
+
+.footer-logo img{
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+.footer-list {
+    /* background-color: red; */
+    display: flex;
+    gap: 100px;
+}
+
+.footer-item li {
+    margin-bottom: 20px;
+}
